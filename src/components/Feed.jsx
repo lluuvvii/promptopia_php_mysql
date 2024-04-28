@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import PromptCard from './PromptCard'
+import { Skeleton } from '@nextui-org/skeleton'
 
 export const PromptCardList = ({ data, handleTagClick }) => {
 
@@ -19,12 +20,14 @@ const Feed = () => {
   const [posts, setPosts] = useState([])
   const [searchTimeOut, setSearchTimeOut] = useState(null)
   const [searchResult, setSearchResult] = useState([])
+  const [loading, setLoading] = useState(true)
 
   const fetchPosts = async () => {
     const response = await fetch('/api/prompt')
     const data = await response.json()
 
     setPosts(data)
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -70,6 +73,16 @@ const Feed = () => {
       {searchText
         ? (<PromptCardList data={searchResult} handleTagClick={handleTagClick} />)
         : (<PromptCardList data={posts} handleTagClick={handleTagClick} />)}
+
+      {/* Skeleton */}
+      {loading
+        ? (
+          <Skeleton count={5} height={100} animation='wave'>
+            Loading...
+          </Skeleton>
+        )
+        : <></>
+      }
     </section>
   )
 }
