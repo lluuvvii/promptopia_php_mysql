@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/skeleton": "^2.0.27",
+    "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
     "mongodb": "^6.2.0",
     "mongoose": "^8.0.0",

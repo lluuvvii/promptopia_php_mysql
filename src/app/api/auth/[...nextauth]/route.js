@@ -3,6 +3,7 @@ import GoogleProvider from 'next-auth/providers/google'
 
 import User from '@models/user';
 import { connectDb } from '@utils/database'
+import axios from 'axios';
 
 const handler = NextAuth({
   providers: [
@@ -35,6 +36,10 @@ const handler = NextAuth({
             image: profile.picture
           })
         }
+
+        const response = await axios.get('http://localhost/promptopia_php_mysql/prompt/');
+
+        response.data.filter((obj) => obj.email === profile.email).map(obj => console.log(obj.email))
 
         return true
       } catch (err) {
