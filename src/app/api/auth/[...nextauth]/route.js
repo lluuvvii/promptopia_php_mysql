@@ -37,9 +37,33 @@ const handler = NextAuth({
           })
         }
 
-        const response = await axios.get('http://localhost/promptopia_php_mysql/prompt/');
+        const response = await axios.get('http://localhost/promptopia_php_mysql/users/');
 
-        response.data.filter((obj) => obj.email === profile.email).map(obj => console.log(obj.email))
+        const userSql = response.data.filter((obj) => obj.email === profile.email).map(obj => obj.email)
+
+        const userData = {
+          email: profile.email,
+          username: profile.name.replace(" ", "").toLowerCase(),
+          image: profile.picture
+        }
+        if (!userSql[0]) {
+          const addUser = async () => {
+            const responsePost = await fetch('http://localhost/promptopia_php_mysql/users/create/',
+              {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+              })
+
+            console.log({ userData })
+            console.log(responsePost.json())
+          }
+
+          addUser()
+          return true
+        }
 
         return true
       } catch (err) {
