@@ -42,7 +42,7 @@ const EditPrompt = () => {
 
     setSubmitting(true)
     try {
-      const response = await fetch(`/api/prompt/${promptId}`, {
+      const response = await fetch(`http://localhost/promptopia_php_mysql/prompts/update/?prompt_id=${promptId}`, {
         method: 'PATCH',
         body: JSON.stringify({
           prompt: post.prompt,

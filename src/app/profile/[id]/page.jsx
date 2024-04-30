@@ -13,7 +13,7 @@ const UserProfile = ({ params }) => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`/api/users/${params?.id}/posts`)
+      const response = await fetch(`http://localhost/promptopia_php_mysql/users/details/?user_id=${params?.id}`)
       const data = await response.json()
 
       setUserPosts(data)
