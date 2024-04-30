@@ -8,8 +8,8 @@ export const PromptCardList = ({ data, handleTagClick }) => {
 
   return (
     <div className='mt-16 prompt_layout'>
-      {data.map(post => (
-        <PromptCard key={post._id} post={post} handleTagClick={handleTagClick} />
+      {data.map((post, i) => (
+        <PromptCard key={i} post={post} handleTagClick={handleTagClick} />
       ))}
     </div>
   )
@@ -23,7 +23,7 @@ const Feed = () => {
   const [loading, setLoading] = useState(true)
 
   const fetchPosts = async () => {
-    const response = await fetch('/api/prompt')
+    const response = await fetch('http://localhost/promptopia_php_mysql/prompts/')
     const data = await response.json()
 
     setPosts(data)
@@ -38,7 +38,7 @@ const Feed = () => {
     const regex = new RegExp(searchtext, "i") // 'i' flag for case-insensitive search
     return posts.filter(
       (item) =>
-        regex.test(item.creator.username) ||
+        regex.test(item.username) ||
         regex.test(item.tag) ||
         regex.test(item.prompt)
     )
@@ -77,9 +77,9 @@ const Feed = () => {
       {/* Skeleton */}
       {loading
         ? (
-          <Skeleton count={5} height={100} animation='wave'>
+          <div className='items-center justify-center text-white'>
             Loading...
-          </Skeleton>
+          </div>
         )
         : <></>
       }

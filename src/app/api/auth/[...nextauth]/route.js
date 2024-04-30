@@ -15,27 +15,32 @@ const handler = NextAuth({
   ],
   callbacks: {
     async session({ session }) {
-      const sessionUser = await User.findOne({ email: session.user.email })
+      // const sessionUser = await User.findOne({ email: session.user.email })
+      const response = await axios.get('http://localhost/promptopia_php_mysql/users/');
 
-      session.user.id = sessionUser._id.toString()
+      const userSql = response.data.filter((obj) => obj.email === session.user.email).map(obj => obj.user_id)
+
+      // console.log({user_id: userSql[0].toString()})
+
+      session.user.id = userSql[0].toString()
 
       return session
     },
     async signIn({ profile }) {
       try {
-        await connectDb()
+        // await connectDb()
 
         // check if user already exists
-        const userExists = await User.findOne({ email: profile.email })
+        // const userExists = await User.findOne({ email: profile.email })
 
         // check if not, create a new user
-        if (!userExists) {
-          await User.create({
-            email: profile.email,
-            username: profile.name.replace(" ", "").toLowerCase(),
-            image: profile.picture
-          })
-        }
+        // if (!userExists) {
+        //   await User.create({
+        //     email: profile.email,
+        //     username: profile.name.replace(" ", "").toLowerCase(),
+        //     image: profile.picture
+        //   })
+        // }
 
         const response = await axios.get('http://localhost/promptopia_php_mysql/users/');
 

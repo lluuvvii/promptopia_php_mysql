@@ -14,7 +14,7 @@ const MyProfile = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`/api/users/${session?.user.id}/posts`)
+      const response = await fetch(`http://localhost/promptopia_php_mysql/users/details/?user_id=${session?.user.id}`)
       const data = await response.json()
 
       setPosts(data)
@@ -26,12 +26,11 @@ const MyProfile = () => {
   }, [session?.user.id])
 
   const handleEdit = (post) => {
-    router.push(`/update-prompt?id=${post._id}`)
+    router.push(`/update-prompt?id=${post.user_id}`)
   }
 
   const handleDelete = async (post) => {
     const hasConfirmed = confirm('Are you sure you want to delete this prompt?')
-
 
     if (hasConfirmed) {
       try {
