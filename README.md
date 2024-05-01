@@ -12,16 +12,16 @@ Sebagai demo anda dapat mengunjungi situs project yang sudah saya deploy [go-pro
 
 Preview :
     <p align="center">
-    Page 1
+    <p>Page 1</p>
   <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-1.png" alt="page" width="500" align="center" />
-    Page 2
+    <p>Page 2</p>
   <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-2.png" alt="page" width="500" align="center" />
-    Page 3
+    <p>Page 3</p>
   <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-3.png" alt="page" width="500" align="center" />
-    Page 4
+    <p>Page 4</p>
   <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-4.png" alt="page" width="500" align="center" />
-    Page 5
+    <p>Page 5</p>
   <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-5.png" alt="page" width="500" align="center" />
-    Page 6
+    <p>Page 6</p>
   <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-6.png" alt="page" width="500" align="center" />
-    </p>
+    </>
