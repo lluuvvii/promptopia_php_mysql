@@ -14,10 +14,10 @@ Preview :
 
 Page 1
     <p align="center">
-  <img src="https://github.com/lluuvvii/promptopia_php_mysql/pages-preview/page-1.png" alt="page" width="500" align="center" />
-  <img src="https://github.com/lluuvvii/promptopia_php_mysql/pages-preview/page-2.png" alt="page" width="500" align="center" />
-  <img src="https://github.com/lluuvvii/promptopia_php_mysql/pages-preview/page-3.png" alt="page" width="500" align="center" />
-  <img src="https://github.com/lluuvvii/promptopia_php_mysql/pages-preview/page-4.png" alt="page" width="500" align="center" />
-  <img src="https://github.com/lluuvvii/promptopia_php_mysql/pages-preview/page-5.png" alt="page" width="500" align="center" />
-  <img src="https://github.com/lluuvvii/promptopia_php_mysql/pages-preview/page-6.png" alt="page" width="500" align="center" />
+  <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-1.png" alt="page" width="500" align="center" />
+  <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-2.png" alt="page" width="500" align="center" />
+  <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-3.png" alt="page" width="500" align="center" />
+  <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-4.png" alt="page" width="500" align="center" />
+  <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-5.png" alt="page" width="500" align="center" />
+  <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-6.png" alt="page" width="500" align="center" />
     </p>
