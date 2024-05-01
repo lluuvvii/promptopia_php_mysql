@@ -20,7 +20,7 @@ const CreatePrompt = () => {
 
     setSubmitting(true)
     try {
-      const response = await fetch('/api/prompt/new', {
+      const response = await fetch('http://localhost/promptopia_php_mysql/prompts/create/', {
         method: 'POST',
         body: JSON.stringify({
           prompt: post.prompt,
