@@ -34,11 +34,11 @@ const MyProfile = () => {
 
     if (hasConfirmed) {
       try {
-        await fetch(`/api/prompt/${post._id.toString()}`, {
+        await fetch(`http://localhost/promptopia_php_mysql/prompts/delete/?prompt_id=${post.prompt_id}`, {
           method: 'DELETE'
         })
 
-        const filteredPosts = posts.filter((p) => p._id !== post._id)
+        const filteredPosts = posts.filter((p) => p.prompt_id !== post.prompt_id)
 
         setPosts(filteredPosts)
       } catch (err) {
