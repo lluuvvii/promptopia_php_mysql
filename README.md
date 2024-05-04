@@ -10,6 +10,9 @@ Untuk mendapatkan folder database mysql berada dalam = /promptopia_php_mysql/sha
 
 Sebagai demo anda dapat mengunjungi situs project yang sudah saya deploy [go-promptopia](https://go-promptopia.vercel.app)
 
+## Note :
+Jika tidak bisa login menggunakan akun google dan terdapat pesan "ACCESS DENIED", Gunakan akun google yang tidak terkait dengan browser yang anda gunakan
+
 Preview :
     <p align="center">
     <p>Page 1</p>
