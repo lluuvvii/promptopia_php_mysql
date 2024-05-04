@@ -14,7 +14,8 @@ Sebagai demo anda dapat mengunjungi situs project yang sudah saya deploy [go-pro
 Jika tidak bisa login menggunakan akun google dan terdapat pesan "ACCESS DENIED", Gunakan akun google yang tidak terkait dengan browser yang anda gunakan
 
 #### Preview :
-    <p align="center">
+
+  <p align="center">
     <p>Page 1</p>
   <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-1.png" alt="page" width="500" align="center" />
     <p>Page 2</p>
@@ -27,3 +28,4 @@ Jika tidak bisa login menggunakan akun google dan terdapat pesan "ACCESS DENIED"
   <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-5.png" alt="page" width="500" align="center" />
     <p>Page 6</p>
   <img src="https://github.com/lluuvvii/promptopia_php_mysql/blob/main/pages-preview/page-6.png" alt="page" width="500" align="center" />
+  </p>
